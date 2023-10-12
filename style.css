@@ -68,4 +68,16 @@ body {
         width: 320px;
         height: 530px;
     }
+    .numeros {
+        gap: 15px;
+    }
+
+    .numeros button {
+        width: 55px;
+        height: 65px;
+    }
+    .numeros span:last-child {
+        width: 125px;
+        height: 65px;
+    }
 }
