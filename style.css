@@ -27,6 +27,7 @@
     width: 260px;
     height: 50px;
     text-align: end;
+    line-height: 50px;
 }
 
 .numeros {
@@ -48,9 +49,10 @@
     font-weight: 650;
     height: 60px;
     width: 50px;
+    line-height: 60px;
 }
 
-.numeros button:hover {
+.numeros span:hover {
     background-color: rgb(197, 197, 197);
 }
 
@@ -58,7 +60,7 @@
     box-shadow: none;
 }
 
-.numeros span:last-child {
+.numeros button {
     width: 120px;
     font-size: 3rem;
     font-weight: 500;
@@ -81,11 +83,11 @@ footer {
         gap: 15px;
     }
 
-    .numeros button {
+    .numeros span {
         width: 55px;
         height: 65px;
     }
-    .numeros span:last-child {
+    .numeros button {
         width: 125px;
         height: 65px;
     }

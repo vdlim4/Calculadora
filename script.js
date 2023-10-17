@@ -1,5 +1,5 @@
 const numeros = document.querySelector('.numeros')
-const botoes = numeros.querySelectorAll('button')
+const botoes = numeros.querySelectorAll('span')
 const painel = document.querySelector('.painel')
 const apagar = document.querySelector('.backspace')
 const clear = document.querySelector('.clear')
@@ -30,6 +30,7 @@ botoes.forEach(botao => {
 
     clear.addEventListener('click', function() {
         painel.innerHTML = ''
+        painel.style.fontSize = "2.5rem"
     })
 
 })
@@ -46,6 +47,9 @@ igual.addEventListener('click', function() {
         painel.innerHTML = ''
     } else {
         calcular()
+        if (painel.textContent.length > 15) {
+            painel.style.fontSize = "1.9rem"
+        }
     }
 })
 
