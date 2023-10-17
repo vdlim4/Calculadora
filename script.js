@@ -42,7 +42,11 @@ apagar.addEventListener('click', function() {
 })
 
 igual.addEventListener('click', function() {
-    calcular()
+    if (painel.innerText == '') {
+        painel.innerHTML = ''
+    } else {
+        calcular()
+    }
 })
 
 
