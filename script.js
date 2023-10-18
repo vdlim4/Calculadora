@@ -21,18 +21,18 @@ botoes.forEach(botao => {
         painel.innerHTML += digito
 
         const conteudo = painel.textContent.trim()
-
-        if (conteudo.length > 15) {
-            alert('[ERRO] Caracteres excessívos!')
-            painel.innerHTML = ''
+        if (painel.innerText.length > 20) {
+            painel.style.fontSize = '1.5rem'
+        } else if (painel.innerText.length > 15) {
+            painel.style.fontSize = '1.9rem'
+        } else {
+            painel.style.fontSize = '2.5rem'
         }
     })
-
+    
     clear.addEventListener('click', function() {
         painel.innerHTML = ''
-        painel.style.fontSize = "2.5rem"
     })
-
 })
 
 apagar.addEventListener('click', function() {
@@ -43,14 +43,18 @@ apagar.addEventListener('click', function() {
 })
 
 igual.addEventListener('click', function() {
-    if (painel.innerText == '') {
+    if (painel.innerText.length == 0) {
         painel.innerHTML = ''
     } else {
         calcular()
-        if (painel.textContent.length > 15) {
-            painel.style.fontSize = "1.9rem"
+        if (painel.innerText.length > 20) {
+            painel.style.fontSize = '1.5rem'
+        } else if (painel.innerText.length > 15) {
+            painel.style.fontSize = '1.9rem'
+        } else {
+            painel.style.fontSize = '2.5rem'
         }
-    }
+    } 
 })
 
 

@@ -20,6 +20,7 @@
     box-shadow: inset 0 0 5px 3px rgba(0, 0, 0, 0.212);
     font-size: 2.5rem;
     font-family: 'Agdasima', sans-serif;
+    line-height: 50px;
     margin: auto;
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
@@ -27,7 +28,6 @@
     width: 260px;
     height: 50px;
     text-align: end;
-    line-height: 50px;
 }
 
 .numeros {
@@ -39,7 +39,7 @@
     padding: 20px;
 }
 
-.numeros button, span{
+.numeros span, input{
     background-color: rgb(226, 226, 226);
     border: none;
     border-radius: 3px;
@@ -56,11 +56,11 @@
     background-color: rgb(197, 197, 197);
 }
 
-.numeros button:active, span:active {
+.numeros input:active, span:active {
     box-shadow: none;
 }
 
-.numeros button {
+.numeros input {
     width: 120px;
     font-size: 3rem;
     font-weight: 500;
@@ -87,7 +87,7 @@ footer {
         width: 55px;
         height: 65px;
     }
-    .numeros button {
+    .numeros input {
         width: 125px;
         height: 65px;
     }
