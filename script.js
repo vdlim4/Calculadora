@@ -15,18 +15,27 @@ function calcular() {
     }
 }
 
+function verificar() {
+    if (painel.innerText.length > 20) {
+        painel.style.fontSize = '1.5rem'
+    } else if (painel.innerText.length > 15) {
+        painel.style.fontSize = '1.9rem'
+    } else {
+        painel.style.fontSize = '2.5rem'
+    }
+}
+
 botoes.forEach(botao => {
     botao.addEventListener('click', function() {
         const digito = this.textContent
         painel.innerHTML += digito
 
         const conteudo = painel.textContent.trim()
-        if (painel.innerText.length > 20) {
-            painel.style.fontSize = '1.5rem'
-        } else if (painel.innerText.length > 15) {
-            painel.style.fontSize = '1.9rem'
+        if (painel.innerText.length > 26) {
+            alert('[ERRO] Caracteres excessivos!')
+            painel.innerHTML = ''
         } else {
-            painel.style.fontSize = '2.5rem'
+            verificar()
         }
     })
     
@@ -47,13 +56,7 @@ igual.addEventListener('click', function() {
         painel.innerHTML = ''
     } else {
         calcular()
-        if (painel.innerText.length > 20) {
-            painel.style.fontSize = '1.5rem'
-        } else if (painel.innerText.length > 15) {
-            painel.style.fontSize = '1.9rem'
-        } else {
-            painel.style.fontSize = '2.5rem'
-        }
+        verificar()
     } 
 })
 

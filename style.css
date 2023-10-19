@@ -39,7 +39,7 @@
     padding: 20px;
 }
 
-.numeros span, input{
+.numeros span, .numeros div{
     background-color: rgb(226, 226, 226);
     border: none;
     border-radius: 3px;
@@ -52,15 +52,15 @@
     line-height: 60px;
 }
 
-.numeros span:hover {
+.numeros span:hover, .numeros div:hover {
     background-color: rgb(197, 197, 197);
 }
 
-.numeros input:active, span:active {
+.numeros div:active, span:active {
     box-shadow: none;
 }
 
-.numeros input {
+.numeros div {
     width: 120px;
     font-size: 3rem;
     font-weight: 500;
@@ -87,7 +87,7 @@ footer {
         width: 55px;
         height: 65px;
     }
-    .numeros input {
+    .numeros div {
         width: 125px;
         height: 65px;
     }
